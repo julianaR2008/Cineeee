@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Mi cielo ❤️</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+
+#contador{
+    color:white;
+    font-size:100px;
+}
+
+
+#pagina{
+    display:none;
+    width:100%;
+    height:100vh;
+
+    background-image:url("fondo.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-color:#000;
+}
+
+
+.boton{
+    position:absolute;
+    bottom:40px;
+    background:#e91e63;
+    color:white;
+    padding:15px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:20px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="contador">3</div>
+
+
+<div id="pagina">
+
+<a class="boton"
+href="https://wa.me/573132045484?text=Sí Juliana, acepto la invitación ❤️🍿">
+Aceptar invitación ❤️
+</a>
+
+
+</div>
+
+
+
+<script>
+
+let numero=3;
+
+let tiempo=setInterval(()=>{
+
+numero--;
+
+document.getElementById("contador").innerHTML=numero;
+
+
+if(numero==0){
+
+clearInterval(tiempo);
+
+document.getElementById("contador").style.display="none";
+
+document.getElementById("pagina").style.display="block";
+
+}
+
+
+},1000);
+
+
+</script>
+
+
+</body>
+</html>
